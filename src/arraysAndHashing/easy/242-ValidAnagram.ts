@@ -1,9 +1,17 @@
+// Leetcode: 242. Valid Anagram
+// Difficulty: Easy
+// URL: https://leetcode.com/problems/valid-anagram/
+
 import { describe, expect, it } from 'vitest'
 
-// given two strings s and t, return true if t is an anagram of s
-// an anagram is a word formed by rearranging the letters of another word
-// e.g. 'anagram' is an anagram of 'nagaram'
-// e.g. 'rat' is not an anagram of 'car'
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+// Example 1:
+// Input: s = "anagram", t = "nagaram"
+// Output: true
+// Example 2:
+// Input: s = "rat", t = "car"
+// Output: false
+
 
 function isAnagram(s:string, t:string) {
   if (s.length !== t.length) return false

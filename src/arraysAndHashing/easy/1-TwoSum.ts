@@ -1,11 +1,14 @@
-// given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target
-// you may assume that each input would have exactly one solution, and you may not use the same element twice
-// e.g. given nums = [2, 7, 11, 15], target = 9
-// e.g. given nums = [3, 2, 4], target = 6
-//
-// return [0, 1] because nums[0] + nums[1] == 9
+// Leetcode: 1. Two Sum
+// Difficulty: Easy
+// URL: https://leetcode.com/problems/two-sum/
 
 import { describe, expect, it } from 'vitest'
+
+// Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+// Example 1:
+// Input: nums = [2,7,11,15], target = 9
+// Output: [0,1]
 
 function twoSum(nums: number[], target: number) {
   const map: { [number: number]: number } = {}
