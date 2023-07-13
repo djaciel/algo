@@ -16,7 +16,6 @@ function mergeArrays(nums1: number[], nums2: number[], m: number, n: number) {
   let p = (m + n) - 1
 
   while (p1 >= 0 && p2 >= 0) {
-    console.log(p, nums1)
     if (nums1[p1] < nums2[p2]) {
       nums1[p] = nums2[p2]
       p2--
@@ -33,7 +32,6 @@ function mergeArrays(nums1: number[], nums2: number[], m: number, n: number) {
     p--
   }
 
-  console.log(nums1)
   return nums1
 }
 
