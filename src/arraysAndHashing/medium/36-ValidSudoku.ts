@@ -30,7 +30,7 @@ function isValidSudoku(board: string[][]): boolean {
 
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {
-      const num = board[i][j];
+      const num = board[i][j]
       if (num === '.') continue
 
       // verify rows
@@ -46,8 +46,9 @@ function isValidSudoku(board: string[][]): boolean {
       }
 
       // verify groups
-      console.log(i,j)
-      const group = `${i/3}${j/3}`
+      console.log(i, j)
+      const group = `${Math.floor(i / 3)}${Math.floor(j / 3)}`
+      console.log('group', group)
       if (!hashMap[group]) {
         hashMap[group] = new Set<string>([num])
       } else {
@@ -90,6 +91,19 @@ describe('isValidSudoku', () => {
         ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
         ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
         ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
+      ])
+    ).toEqual(false)
+    expect(
+      isValidSudoku([
+        ['.', '.', '.', '.', '5', '.', '.', '1', '.'],
+        ['.', '4', '.', '3', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '3', '.', '.', '1'],
+        ['8', '.', '.', '.', '.', '.', '.', '2', '.'],
+        ['.', '.', '2', '.', '7', '.', '.', '.', '.'],
+        ['.', '1', '5', '.', '.', '.', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '2', '.', '.', '.'],
+        ['.', '2', '.', '9', '.', '.', '.', '.', '.'],
+        ['.', '.', '4', '.', '.', '.', '.', '.', '.'],
       ])
     ).toEqual(false)
   })
