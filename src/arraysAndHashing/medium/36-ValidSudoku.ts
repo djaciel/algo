@@ -46,9 +46,7 @@ function isValidSudoku(board: string[][]): boolean {
       }
 
       // verify groups
-      console.log(i, j)
       const group = `${Math.floor(i / 3)}${Math.floor(j / 3)}`
-      console.log('group', group)
       if (!hashMap[group]) {
         hashMap[group] = new Set<string>([num])
       } else {
