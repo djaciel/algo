@@ -1,5 +1,5 @@
 // Leetcode: 128. Longest Consecutive Sequence
-// Difficulty: Medium
+// Difficulty: Hard
 // URL: https://leetcode.com/problems/longest-consecutive-sequence/
 
 import { describe, it, expect } from 'vitest'
