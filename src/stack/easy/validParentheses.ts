@@ -1,3 +1,9 @@
+// Leetcode: 20. Valid Parentheses
+// Difficulty: Easy
+// URL: https://leetcode.com/problems/valid-parentheses/
+
+import { describe, expect, it } from 'vitest'
+
 // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 // An input string is valid if:
 // 1. Open brackets must be closed by the same type of brackets.
@@ -8,7 +14,6 @@
 // Example 2:
 // Input: s = "()[]{}"
 // Output: true
-import { describe, expect, it } from 'vitest'
 
 function validate(input: string): Boolean {
   const stack: string[] = []
